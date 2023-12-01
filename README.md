@@ -1,2 +1,3 @@
-# aoc_2023
-AOC 2023
+# AOC 2023
+
+Attempt at AOC 2023!
