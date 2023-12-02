@@ -1,4 +1,4 @@
-# Description : Advent Of Code 2020 : Day 2, Part 1
+# Description : Advent Of Code 2020 : Day 2, Part 2
 
 import re
 
@@ -38,24 +38,21 @@ for line in lines:
 
         games_data[game_id] = color_counts
 
-possible_games = []
+powers = []
 
 for key in games_data.keys():
     # Get the color counts for this game
     color_counts = games_data[key]
 
-    if max(color_counts['green']) > 13:
-        continue
-    if max(color_counts['blue']) > 14:
-        continue
-    if max(color_counts['red']) > 12:
-        continue
-    possible_games.append(int(key))
+    power = max(color_counts['green']) * max(color_counts['blue']) * max(color_counts['red'])
 
-print("Possible games: ")
-print(possible_games)
-print("Total of possible games: ")
-print(sum(possible_games))
+    powers.append(power)
+
+print("Powers: ")
+print(powers)
+
+print("Total of powers: ")
+print(sum(powers))
         
 # close file
 f.close()
